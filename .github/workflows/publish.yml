@@ -38,13 +38,6 @@ jobs:
           --output ./packages
           /p:PackageVersion=${{ steps.version.outputs.version }}
 
-      - name: Publish NuGet
-        run: >
-          dotnet nuget push "./packages/*.nupkg"
-          --source github
-          --api-key "${{ secrets.GITHUB_TOKEN }}"
-          --skip-duplicate
-
       - name: Create Release
         run: |
           gh release create "v${{ steps.version.outputs.version }}" \
