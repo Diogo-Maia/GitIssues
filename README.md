@@ -1,6 +1,6 @@
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![Version](https://img.shields.io/github/v/tag/Diogo-Maia/GitIssues?label=Version)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
 
 # GitIssues
 
