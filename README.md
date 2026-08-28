@@ -1,3 +1,7 @@
+![Version](https://img.shields.io/github/v/release/Diogo-Maia/GitIssues)
+![License](https://img.shields.io/github/license/Diogo-Maia/GitIssues)
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
+
 # GitIssues
 
 `GitIssues` is a .NET NuGet package for automatically reporting application exceptions as issues in a GitHub repository.
