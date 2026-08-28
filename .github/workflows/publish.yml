@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+      id-token: write
 
     steps:
       - name: Checkout
@@ -37,6 +38,19 @@ jobs:
           --no-build
           --output ./packages
           /p:PackageVersion=${{ steps.version.outputs.version }}
+
+      - name: NuGet login
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: Diogo-Maia
+
+      - name: Publish to NuGet
+        run: >
+          dotnet nuget push "./packages/*.nupkg"
+          --api-key "${{ steps.login.outputs.NUGET_API_KEY }}"
+          --source https://api.nuget.org/v3/index.json
+          --skip-duplicate
 
       - name: Create Release
         env:
